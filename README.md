@@ -1,0 +1,1 @@
+# responsive-product-pricing-cards

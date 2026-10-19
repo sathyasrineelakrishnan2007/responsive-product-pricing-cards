@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Choose Your Plan</h1>
+        <p>Simple pricing for everyone. Upgrade as you grow.</p>
+
+        <div class="billing">
+            <span>Monthly</span>
+            <label class="switch">
+                <input type="checkbox" id="billingToggle">
+                <span class="slider"></span>
+            </label>
+            <span>Yearly <small>Save 20%</small></span>
+        </div>
+    </header>
+
+    <main class="pricing-container">
+
+        <section class="card">
+            <h2>Starter</h2>
+            <p class="description">Perfect for beginners</p>
+
+            <h3 class="price" data-monthly="199" data-yearly="1910">
+                ₹199 <small>/month</small>
+            </h3>
+
+            <ul>
+                <li>✓ 5 Projects</li>
+                <li>✓ Basic Analytics</li>
+                <li>✓ Email Support</li>
+                <li>✓ 5 GB Storage</li>
+            </ul>
+
+            <button onclick="selectPlan('Starter')">
+                Get Started
+            </button>
+        </section>
+
+        <section class="card popular">
+            <div class="ribbon">POPULAR</div>
+
+            <h2>Professional</h2>
+            <p class="description">For growing businesses</p>
+
+            <h3 class="price" data-monthly="499" data-yearly="4790">
+                ₹499 <small>/month</small>
+            </h3>
+
+            <ul>
+                <li>✓ Unlimited Projects</li>
+                <li>✓ Advanced Analytics</li>
+                <li>✓ Priority Support</li>
+                <li>✓ 50 GB Storage</li>
+            </ul>
+
+            <button onclick="selectPlan('Professional')">
+                Choose Pro
+            </button>
+        </section>
+
+        <section class="card best-value">
+            <div class="ribbon">BEST VALUE</div>
+
+            <h2>Enterprise</h2>
+            <p class="description">For large organizations</p>
+
+            <h3 class="price" data-monthly="999" data-yearly="9590">
+                ₹999 <small>/month</small>
+            </h3>
+
+            <ul>
+                <li>✓ Unlimited Projects</li>
+                <li>✓ Premium Analytics</li>
+                <li>✓ 24/7 Support</li>
+                <li>✓ Unlimited Storage</li>
+            </ul>
+
+            <button onclick="selectPlan('Enterprise')">
+                Contact Us
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Pricing Plans. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    padding: 55px 20px 35px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #173b78;
+}
+
+.header p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.billing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.billing small {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.switch {
+    position: relative;
+    width: 52px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background: #94a3b8;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 4px;
+    bottom: 4px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+    background: #2563eb;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 10px auto 50px;
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    padding: 35px 25px;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(37, 99, 235, 0.15);
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.price {
+    font-size: 32px;
+    color: #1d4ed8;
+    margin-bottom: 25px;
+}
+
+.price small {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: normal;
+}
+
+.card ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.card li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f1f5f9;
+    color: #475569;
+}
+
+.card button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    background: #1d4ed8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.card button:hover {
+    background: #173b78;
+    transform: scale(1.03);
+}
+
+.popular {
+    border: 2px solid #2563eb;
+}
+
+.ribbon {
+    position: absolute;
+    top: 17px;
+    right: -32px;
+    width: 125px;
+    text-align: center;
+    padding: 6px 0;
+    background: #2563eb;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    transform: rotate(35deg);
+}
+
+.best-value .ribbon {
+    background: #059669;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+}
+
+/* Responsive layout */
+@media (max-width: 850px) {
+    .pricing-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .pricing-container {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+}
